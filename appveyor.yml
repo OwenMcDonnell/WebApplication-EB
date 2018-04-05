@@ -7,11 +7,8 @@ install:
 - ps: |
     $newContent = (Get-Content webapplication-eb/Views/Home/Index.cshtml).Replace("ASP.NET", "ASP.NET-$env:APPVEYOR_BUILD_NUMBER")
     Set-Content -Value $newContent -Path  webapplication-eb/Views/Home/Index.cshtml
-before_build:
-- cmd: nuget restore
-build:
-  publish_wap_beanstalk: true
-  verbosity: minimal
+
+
 deploy:
 - provider: ElasticBeanstalk
   access_key_id: AKIAJEL7YZLCACRKJNRA
