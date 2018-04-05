@@ -14,12 +14,12 @@ build:
   verbosity: minimal
 deploy:
 - provider: ElasticBeanstalk
-  access_key_id: AKIAIHX6TB6ZCZYYIMNQ
+  access_key_id: AKIAJEL7YZLCACRKJNRA
   secret_access_key:
-    secure: Njji27qeu2TD7Cxr4VnqZ0MZak8EQ+/fxVRPT641Evq5Gn4ysFQjm0S4LINjBAnx
-  application_name: WebApplicationEB3
-  environment_name: WebApplicationEB3-dev3
-  region: eu-west-1
+    secure: Ef48bJ+oZMAYCKq55ze4j0LKdqsJ27uVFJo1rAtTpgkpltlZVGvCMYgwVM+gb/r/
+  application_name: appveyor-net-no-deploy
+  environment_name: appveyor-net-no-deploy
+  region: us-east-2
   healthcheck: /Home/Contact
   on:
     CI_WINDOWS: true
